@@ -1,6 +1,11 @@
 <?php  
     // Get Category
-    $category->read_single();
+    $result = $category->read_single();
+
+    $row = $result->fetch(PDO::FETCH_ASSOC);
+
+    // Set Properties
+    $category->category = $row['category'];
 
     // Create Category Array
     $category_arr = array(
