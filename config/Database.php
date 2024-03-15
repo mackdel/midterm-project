@@ -23,7 +23,7 @@
             if($this->conn){
                 return $this->conn;
             } else {
-                $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname};sslcert=blank;";
+                $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname};";
 
                 // connect through PDO
                 try {
