@@ -2,6 +2,11 @@
     // Get Author
     $author->read_single();
 
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Set Properties
+    $author->author = $row['author'];
+
     // Create Author Array
     $author_arr = array(
         'id' => $author->id,
