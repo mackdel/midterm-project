@@ -24,6 +24,7 @@
     // Instantiate Author Object
     $author = new Author($db);
 
+    $id = null;
     // Execute Request
     if ($method === 'GET') {
         // Get ID from URL

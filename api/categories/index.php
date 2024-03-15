@@ -24,6 +24,7 @@
     // Instantiate Category Object
     $category = new Category($db);
 
+    $id = null;
     // Execute Request
     if ($method === 'GET') {
         // Get ID from URL

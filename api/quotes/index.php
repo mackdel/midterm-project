@@ -29,6 +29,7 @@
     $author = new Author($db);
     $category = new Category($db);
     
+    $id = null;
     // Execute Request
     if ($method === 'GET') {
         
