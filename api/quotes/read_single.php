@@ -3,26 +3,23 @@
     
     $result = $quote->read_single();
     $num = $result->rowCount();
-    $quote_arr = null;
+    $quotes_arr = array();
 
     // Check if Quotes
     if ($num > 0){
         if ($num == 1) {
             // Create Quote Array
             $quote_arr = array(
-                'id' => $quote->id,
-                'quote' => $quote->quote,
-                'author_id' => $quote->author_id,
-                'category_id' => $quote->category_id
+                'id' => $id,
+                'quote' => $quote,
+                'author_id' => $author_id,
+                'category_id' => $category_id
             );
 
             // Turn to JSON & Output
             echo json_encode($quotes_arr);
-        } else {
+        } else { // If query used author_id or category_id there might be multiple results
             // Quotes Array
-                // If query used author_id or category_id there might be multiple results
-            $quotes_arr = array();
-
             while($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 extract($row);
 
