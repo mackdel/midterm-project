@@ -1,8 +1,8 @@
 <?php  
     // Get Author
-    $author->read_single();
+    $result = $author->read_single();
 
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $row = $result->fetch(PDO::FETCH_ASSOC);
 
     // Set Properties
     $author->author = $row['author'];
