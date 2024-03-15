@@ -15,6 +15,9 @@
                 'author_id' => $quote->author_id,
                 'category_id' => $quote->category_id
             );
+
+            // Turn to JSON & Output
+            echo json_encode($quotes_arr);
         } else {
             // Quotes Array
                 // If query used author_id or category_id there might be multiple results
@@ -33,12 +36,10 @@
 
             // Push to Quotes Array
             array_push($quotes_arr, $quotes_item);
+            // Turn to JSON & Output
+            echo json_encode($quotes_arr);
         }
         }
-
-        // Turn to JSON & Output
-        echo json_encode($quotes_arr);
-
     } else { 
         // No Quotes
         echo json_encode(
