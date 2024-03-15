@@ -8,10 +8,13 @@
     // Check if Quotes
     if ($num > 0){
         if ($num == 1) {
+            $row = $result->fetch(PDO::FETCH_ASSOC);
+            extract($row);
+
             // Create Quote Array
             $quote_arr = array(
                 'id' => $id,
-                'quote' => $quote,
+                'quote' => html_entity_decode($quote),
                 'author_id' => $author_id,
                 'category_id' => $category_id
             );
