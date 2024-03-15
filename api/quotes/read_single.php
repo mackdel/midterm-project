@@ -15,8 +15,8 @@
             $quote_arr = array(
                 'id' => $id,
                 'quote' => html_entity_decode($quote),
-                'author_id' => $author_id,
-                'category_id' => $category_id
+                'author' => $author,
+                'category' => $category
             );
 
             // Turn to JSON & Output
