@@ -1,8 +1,8 @@
 <?php
-    $author->author = $data->author;
-    
     // Create Author
-    if(isset($author->author)) {
+    if(isset($data->author)) {
+        $author->author = $data->author;
+
         $author->create();
         
         // Create Author Array

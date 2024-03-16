@@ -1,8 +1,8 @@
 <?php
-    $category->category = $data->category;
-    
     // Create Category
-    if(isset($category->category)) {
+    if(isset($data->category)) {
+        $category->category = $data->category;
+
         $category->create();
         
         // Create Category Array
