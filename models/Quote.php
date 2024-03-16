@@ -96,9 +96,7 @@
             $stmt->bindParam(':quote', $this->quote);
             $stmt->bindParam(':author_id', $this->author_id);
             $stmt->bindParam(':category_id', $this->category_id);
-            
-            print_r($stmt);
-            
+
             // Execute Query
             if($stmt->execute()) {
                 return true;

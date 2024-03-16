@@ -24,7 +24,8 @@
 
         // Get Author & Quote
         $quote->id = $db->lastInsertID();
-
+        echo ($quote->id);
+        
         // Create Quote Array
         $quote_arr = array(
             'id' => $quote->id,
