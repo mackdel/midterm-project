@@ -12,7 +12,7 @@
             extract($row);
 
             // Create Quote Array
-            $quote_arr = array(
+            $quotes_arr = array(
                 'id' => $id,
                 'quote' => html_entity_decode($quote),
                 'author' => $author,
@@ -26,13 +26,13 @@
             while($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 extract($row);
 
-            // One Quote
-            $quotes_item = array(
-                'id' => $id,
-                'quote' => html_entity_decode($quote),
-                'author' => $author,
-                'category' => $category
-              );
+                // One Quote
+                $quotes_item = array(
+                    'id' => $id,
+                    'quote' => html_entity_decode($quote),
+                    'author' => $author,
+                    'category' => $category
+                );
 
             // Push to Quotes Array
             array_push($quotes_arr, $quotes_item);
