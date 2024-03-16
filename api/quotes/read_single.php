@@ -21,7 +21,7 @@
             );
 
             echo json_encode($quote_arr);
-        }
+        } else {
         // Quotes Array
             // If query used author_id or category_id there might be multiple results
         $quotes_arr = array();
@@ -43,7 +43,7 @@
 
         // Turn to JSON & Output
         echo json_encode($quotes_arr);
-
+        }
     } else { 
         // No Quotes
         echo json_encode(
