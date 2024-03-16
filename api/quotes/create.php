@@ -1,6 +1,6 @@
 <?php
     // Create Quote
-    if($data->quote && $data->author_id && $data->category_id) {
+    if(isset($data->quote) && isset($data->author_id) && isset($data->category_id)) {
         // Get Data 
         $quote->quote = $data->quote;
         $quote->author_id = $data->author_id;
