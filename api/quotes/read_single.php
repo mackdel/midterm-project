@@ -2,17 +2,12 @@
     // Get Quote Query Results
     $result = $quote->read_single();
     $num = $result->rowCount();
-
-    // NEED to make an condition where if quotes id was given then send SINGLE JSON data
-
-
+    
     // Check if Quotes
     if ($num > 0){
         if (isset($quote->id)) {
             $row = $result->fetch(PDO::FETCH_ASSOC);
             extract($row);
-
-            echo('Here');
 
             $quote_arr = array(
                 'id' => $id,
