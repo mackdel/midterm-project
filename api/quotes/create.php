@@ -15,6 +15,9 @@
             // Not Valid - Exit
             exit(json_encode( array('message' => 'category_id Not Found')));
         }
+        echo ($quote->quote);
+        echo ($quote->author_id);
+        echo ($quote->category_id);
 
         // Execute Request
         $quote->create();
