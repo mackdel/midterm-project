@@ -1,11 +1,27 @@
 <?php  
     // Get Quote Query Results
-    
     $result = $quote->read_single();
     $num = $result->rowCount();
 
+    // NEED to make an condition where if quotes id was given then send SINGLE JSON data
+
+
     // Check if Quotes
     if ($num > 0){
+        if (isset($quotes->id)) {
+            extract($row);
+
+            echo('Here');
+
+            $quote_arr = array(
+                'id' => $id,
+                'quote' => html_entity_decode($quote),
+                'author' => $author,
+                'category' => $category
+            );
+
+            echo json_encode($quote_arr);
+        }
         // Quotes Array
             // If query used author_id or category_id there might be multiple results
         $quotes_arr = array();
