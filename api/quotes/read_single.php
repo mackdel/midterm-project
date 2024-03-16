@@ -1,12 +1,11 @@
 <?php  
     // Get Quote Query Results
-    
     $result = $quote->read_single();
     $num = $result->rowCount();
     $quotes_arr = array();
 
     // Check if Quotes
-    if ($num > 0){
+    if ($num > 0){ // Single Output
         if ($num == 1) {
             $row = $result->fetch(PDO::FETCH_ASSOC);
             extract($row);
@@ -21,6 +20,7 @@
 
             // Turn to JSON & Output
             echo json_encode($quotes_arr);
+
         } else { // If query used author_id or category_id there might be multiple results
             // Quotes Array
             while($row = $result->fetch(PDO::FETCH_ASSOC)) {
