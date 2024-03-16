@@ -1,6 +1,6 @@
 <?php
     // Update Author
-    if($data->author && $data->id) {
+    if(isset($data->author) && isset($data->id)) {
         // Get Data & Validate it 
         $author->id = $data->id;
         if(!isValid($author->id, $author)) {

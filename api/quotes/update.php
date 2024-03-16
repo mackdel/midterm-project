@@ -1,6 +1,6 @@
 <?php
     // Update Quote
-    if($data->id && $data->quote && $data->author_id && $data->category_id) {
+    if(isset($data->id) && isset($data->quote) && isset($data->author_id) && isset($data->category_id)) {
 
         // Get Data & Validate 
         $quote->quote = $data->quote;

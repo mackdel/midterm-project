@@ -2,7 +2,7 @@
     $author->author = $data->author;
     
     // Create Author
-    if($author->author) {
+    if(isset($author->author)) {
         $author->create();
         
         // Create Author Array

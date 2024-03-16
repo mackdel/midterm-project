@@ -2,7 +2,7 @@
     $category->category = $data->category;
     
     // Create Category
-    if($category->category) {
+    if(isset($category->category)) {
         $category->create();
         
         // Create Category Array

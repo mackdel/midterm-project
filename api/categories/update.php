@@ -1,6 +1,6 @@
 <?php
     // Update Category
-    if($data->category && $data->id) {
+    if(isset($data->category) && isset($data->id)) {
         // Get Data & Validate it 
         $category->id = $data->id;
         if(!isValid($category->id, $category)) {
