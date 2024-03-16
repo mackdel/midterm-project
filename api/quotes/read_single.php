@@ -9,6 +9,7 @@
     // Check if Quotes
     if ($num > 0){
         if (isset($quote->id)) {
+            $row = $result->fetch(PDO::FETCH_ASSOC);
             extract($row);
 
             echo('Here');
