@@ -8,7 +8,7 @@
 
     // Check if Quotes
     if ($num > 0){
-        if (isset($quotes->id)) {
+        if (isset($quote->id)) {
             extract($row);
 
             echo('Here');
